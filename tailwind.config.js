@@ -32,6 +32,7 @@ module.exports = {
         midblack: '#292928',
         deepblack: '#1f1f1e',
         trans: 'rgba(0,0,0,0.7)',
+        darkmode: '#201c29',
       },
       
       fontFamily: {
@@ -40,6 +41,7 @@ module.exports = {
         yellowtail: ['Yellowtail'],
         comfortaa: ['Comfortaa'],
         josephinsans: ['Josefin+Sans'],
+        satisfy: ['Satisfy'],
       },
     },
   },
