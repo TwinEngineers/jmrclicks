@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
+        
+        #topBtn{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+ 
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  display: none;
+  z-index: 99999;
+}
+    
         body{background: #000;}
         
 .gallery{
@@ -105,10 +121,11 @@ img{
         <div><img src="images/click30.jpeg" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-sine"></div>
         <div><img src="images/click16.jpeg" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-sine"></div>
         <div><img src="images/click32.jpeg" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-sine"></div>
+        <button id="topBtn" class="bggradientcolor"><i class="fa fa-arrow-up"></i></button>
    </div>
-   <!--footer open-->
-   <p class="bg-deepblack text-gray-500 font-comfortaa p-6 text-center">All rights reserved by JMR Clicks || @2020</p>
-   <!--footer close-->
+    <!--footer open-->
+    <p class="bg-deepblack text-gray-500 font-comfortaa p-6 text-center">© 2020 All rights reserved by JMR Clicks || Crafted by <a href="https://www.linkedin.com/in/keerthi-preethi-a7879316b" class="text-orange-700 font-comfortaa font-semibold text-xl">Twin Engineers</a> </p>
+    <!--footer close-->
    <!--aos animation script start-->
    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
    <script>
@@ -116,5 +133,22 @@ img{
    </script>
    <!--aos animation script end-->
    <script src="script.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+$(window).scroll(function(){
+  if($(this).scrollTop() > 40){
+    $('#topBtn').fadeIn();
+  } else{
+    $('#topBtn').fadeOut();
+  }
+});
+
+$("#topBtn").click(function(){
+  $('html ,body').animate({scrollTop : 0},800);
+});
+});
+    </script>
 </body>
 </html>

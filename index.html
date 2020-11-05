@@ -9,7 +9,20 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
     <link rel="stylesheet" href="style.css">
     <style>
-        
+        #topBtn{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+ 
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  display: none;
+  z-index: 99999;
+}
     </style>
     <script>
         function show() { 
@@ -72,6 +85,7 @@
             <img src="images/jmr_profile_black.png" alt="" class="" data-aos="zoom-in" data-aos-duration="1100" data-aos-easing="ease-in-sine">
         </div>
         <!--side image close-->
+        <button id="topBtn" class="bggradientcolor"><i class="fa fa-arrow-up"></i></button>
     </div>
     <!--landing page close-->
 
@@ -295,5 +309,23 @@
    AOS.init();
 </script>
     <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+$(window).scroll(function(){
+  if($(this).scrollTop() > 40){
+    $('#topBtn').fadeIn();
+  } else{
+    $('#topBtn').fadeOut();
+  }
+});
+
+$("#topBtn").click(function(){
+  $('html ,body').animate({scrollTop : 0},800);
+});
+});
+    </script>
+    
 </body>
 </html>
