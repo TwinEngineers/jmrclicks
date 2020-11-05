@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradientcolor
+{
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-600 via-red-600 to-red-900;
+}
+
+.bggradientcolor
+{
+    @apply bg-gradient-to-r from-orange-600 via-red-600 to-red-900;
+}
+
+.card
+{
+    @apply bg-midblack m-4 overflow-hidden rounded-md relative;
+
+}
+
+.badge
+{
+    @apply bg-gray-200 rounded-full p-2 absolute top-0 ml-2 mt-2;
+
+}
+
+.anim
+{
+    @apply transition duration-700 ease-in-out;
+}
+
+.button
+{
+    @apply cursor-pointer border-2 rounded-full px-4 py-2 m-4 text-xl border-orange-700 text-gray-200 font-semibold  text-center;
+}
