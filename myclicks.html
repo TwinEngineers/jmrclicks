@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
+        #foot{
+            background-color: #292929;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23232323' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%231d1d1d' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23171717' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23121212' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%230c0c0c' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23060606' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23000000' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+        }
         
         #topBtn{
   position: fixed;
@@ -65,32 +71,75 @@ img{
             <a href="index.html"><img src="images/logo.jpeg" alt="" class="h-20 w-32 animate-pulse"></a>
         <!--logo end-->
         <!--menu burger open-->
-        
+        <button type="submit" class="transform scale-105 hover:scale-110 anim button" id="burger">Book Now</button>
+
        <!--menu burger close-->
     </div>
-    <div class="bg-black text-2xl text-gray-200 text-center hidden space-y-10" id="menu">
-        <div class="md:flex md:justify-around ">
-        <a href="" class="block hover:border-gray-200 hover:font-semibold hover:text-orange-700 hover:tracking-widest transition duration-700">Home</a>
-        <a href="" class="block hover:font-semibold hover:text-orange-700 hover:tracking-widest transition duration-700">About</a>
-        <a href="" class="block hover:font-semibold hover:text-orange-700 hover:tracking-widest transition duration-700">My Clicks</a>
-        <a href="" class="block hover:font-semibold hover:text-orange-700 hover:tracking-widest transition duration-700">Contact</a>
-       </div> 
-    </div>
+    
 <!--nav bar close-->
+<!--book open-->
+<div class="bg-midblack hidden" id="menu">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,133.3C672,117,768,107,864,122.7C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    <!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319"><path fill="#000" fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>-->
+
+    <div id="about" class="mb-16 rounded-sm flex justify-center" data-aos="zoom-out" data-aos-duration="900" data-aos-easing="ease-in-sine">
+        <h2 class="gradientcolor font-bold font-comfortaa text-4xl ">Booking<span class="ml-2">Now</span></h2>
+    </div>
+    <form  name="booking" method="POST" data-netlify="true" >
+        <div class="flex justify-center">
+        <input type="text" class="placeholder-gray-500  border-2 border-gray-500 px-16 md:px-20 py-3 bg-midblack rounded-xl" name="name" placeholder="Name.." >
+        </div><br>
+        <div class="flex justify-center">
+            <input type="email" class="placeholder-gray-500 border-2 border-gray-500 px-16 md:px-20 py-3 bg-midblack rounded-xl" name="email" placeholder="Email-ID..">
+        </div><br>
+        <div class="flex justify-center">
+            <input type="text" class="placeholder-gray-500 border-2 border-gray-500 px-16 md:px-20 py-3 bg-midblack rounded-xl" name="phonenumber" placeholder="Phone no..">
+        </div><br>
+        <div class="flex justify-center">
+            <input type="text" class="placeholder-gray-500 border-2 border-gray-500 px-16 md:px-20 py-10 bg-midblack rounded-xl"  name="message" placeholder="Message..">
+        </div>
+        <!--checkbox start-->
+        
+      <div class="flex justify-center">
+            <input type="checkbox" id="AlbumDesign" name="AlbumDesign" value="AlbumDesign"  class="gradientcolor font-comfortaa text-2xl mt-4" style=" width: 20px; height: 20px; margin-right: 10px;"  >
+            <label for="AlbumDesign"  class="gradientcolor font-comfortaa text-2xl mt-4"> Album Design</label><br>
+        </div>
+        <div class="flex justify-center ">
+            <input type="checkbox" id="OilPainting" name="OilPainting" value="OilPainting"  class="gradientcolor font-comfortaa text-2xl mt-4" style=" width: 20px; height: 20px; margin-right: 10px;"  >
+            <label for="OilPainting"  class="gradientcolor font-comfortaa text-2xl mt-3"> Oil Painting</label><br>
+        </div>
+        <div class="flex justify-center">
+            <input type="checkbox" id="DigitalPainting" name="DigitalPainting" value="DigitalPainting"  class="gradientcolor font-comfortaa text-2xl mt-4" style=" width: 20px; height: 20px; margin-right: 10px;"  >
+            <label for="DigitalPainting"  class="gradientcolor font-comfortaa text-2xl mt-3"> Digital Painting</label><br>
+        </div>
+    
+   
+        <div class="flex justify-center">
+            <input type="checkbox" id="ColorManipulation" name="ColorManipulation" value="ColorManipulation"  class="gradientcolor font-comfortaa text-2xl mt-4" style=" width: 20px; height: 20px; margin-right: 10px;"  >
+            <label for="ColorManipulation"  class="gradientcolor font-comfortaa text-2xl mt-3"> Color Manipulation</label><br>
+        </div>
+        <div class="flex justify-center ">
+            <input type="checkbox" id="VectorCreation" name="VectorCreation" value="VectorCreation"  class="gradientcolor font-comfortaa text-2xl mt-4" style=" width: 20px; height: 20px; margin-right: 10px;"  >
+            <label for="VectorCreation"  class="gradientcolor font-comfortaa text-2xl mt-3"> Vector Creation</label><br>
+        </div>
+    
+        <!--checkbox end-->
+        <div class="flex justify-center mt-10">
+    
+            <button type="submit" class="transform scale-105 hover:scale-110 anim button bg-gradient-to-r border-midblack from-orange-600 via-red-600 to-red-900 ">Book Now!</button>
+
+        </div>
+        </form>
+    </form>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319"><path fill="#000" fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+</div>
+                    <!--book close-->                                       
+                                           
 
     <div class="gallery">
-        <div class="relative">
-            <img src="images/click10.jpeg" class="rounded-md" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-sine">
-            <div class="absolute top-0 bottom-0 left-0 right-0 opacity-0 hover:opacity-100 hover:bg-trans anim">
-                <p class="text-gray-300 font-sans text-xl text-center mt-24 ">hii heloo</p>
-            </div>
-        </div>
-        <div class="relative">
-            <img src="images/click1.jpeg" class="rounded-md" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-sine">
-            <div class="absolute top-0 bottom-0 left-0 right-0 opacity-0 hover:opacity-100 hover:bg-trans anim">
-                <p class="text-gray-300 font-sans text-xl text-center mt-24">hii heloo</p>
-            </div>
-        </div>
+        <div><img src="images/click10.jpeg" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-sine"></div>
+        <div><img src="images/click1.jpeg" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-sine"></div>
         <div><img src="images/click2.jpeg" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-sine"></div>
         <div><img src="images/click4.jpeg" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-sine"></div>
         <div><img src="images/click5.jpeg" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-sine"></div>
@@ -123,8 +172,13 @@ img{
         <div><img src="images/click32.jpeg" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-sine"></div>
         <button id="topBtn" class="bggradientcolor"><i class="fa fa-arrow-up"></i></button>
    </div>
+   <div class="md:flex md:justify-center mt-10">        
+    <a href="https://www.facebook.com/JMR-Clicks-1499492773513429/"><div class="flex justify-center"><button type="submit" class="transform scale-105 hover:scale-110 anim button">More Clicks on   <i class="fa fa-facebook" style="font-size:25px; color: rgb(51, 148, 212)"></i></button></div></a>
+    <a href="https://www.instagram.com/ramanesh_waran/"><div class="flex justify-center"><button type="submit" class="transform scale-105 hover:scale-110 anim button">More Clicks on   <i class="fa fa-instagram" style="font-size:25px; color: rgb(216, 122, 33)"></i></button></div></a>
+
+   </div>
     <!--footer open-->
-    <p class="bg-deepblack text-gray-500 font-comfortaa p-6 text-center">© 2020 All rights reserved by JMR Clicks || Crafted by <a href="https://www.linkedin.com/in/keerthi-preethi-a7879316b" class="text-orange-700 font-comfortaa font-semibold text-xl">Twin Engineers</a> </p>
+    <p id="foot" class="bg-deepblack text-gray-500 font-comfortaa p-6 text-center">© 2020 All rights reserved by JMR Clicks || Crafted by <a href="https://www.linkedin.com/in/keerthi-preethi-a7879316b" class="text-orange-700 font-comfortaa font-semibold text-xl">Twin Engineers</a> </p>
     <!--footer close-->
    <!--aos animation script start-->
    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
